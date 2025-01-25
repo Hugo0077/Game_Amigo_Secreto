@@ -160,3 +160,55 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* Ajuste do contêiner de botões para garantir que os botões não saiam da tela */
+.botao-container {
+    display: flex;
+    flex-direction: column; /* Empilhar os botões verticalmente */
+    align-items: center; /* Centralizar os botões */
+    gap: 10px; /* Distância entre os botões */
+    margin-top: 20px;
+    width: 100%; /* Garantir que ocupe toda a largura disponível */
+    max-width: 400px; /* Limite máximo para largura do contêiner */
+}
+
+/* Estilo do botão Sortear */
+.button-sortear {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* O botão ocupará toda a largura disponível no contêiner */
+    box-sizing: border-box; /* Incluir padding no cálculo de largura total */
+}
+
+.button-sortear:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Estilo para o botão de reset */
+.button-reset {
+    padding: 8px 18px;
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    border: none;
+    border-radius: 20px;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: auto; /* O botão de reset tem o tamanho menor */
+}
+
+.button-reset:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.05);
+}
