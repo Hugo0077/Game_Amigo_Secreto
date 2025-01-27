@@ -37,6 +37,8 @@ function adicionarAmigo() {
     limparCampo(); // Limpa o campo de entrada após a adição
 }
 
+/* vesão diferente
+
 // Função para exibir a lista de amigos na tela
 function exibirListaAmigos(){
     let listaAmigos = document.getElementById("listaAmigos"); // Seleciona o elemento onde a lista será exibida
@@ -52,6 +54,28 @@ function exibirListaAmigos(){
 function exibirListaSorteados() {
     let listaSorteados = document.querySelector("#lista-sorteados"); // Seleciona o elemento onde a lista de sorteados será exibida
     listaSorteados.innerHTML = sorteados.join(", "); // Exibe os nomes sorteados, separados por vírgulas
+}*/
+
+
+// Função para exibir a lista de amigos na tela
+function exibirListaAmigos() {
+    let listaAmigos = document.getElementById("listaAmigos"); // Seleciona o elemento onde a lista será exibida
+    listaAmigos.innerHTML = ""; // Limpa a lista atual
+
+    amigos.sort(); // Ordena a lista de amigos em ordem alfabética
+
+    // Itera pela lista de amigos e cria um elemento <li> para cada um
+    amigos.forEach((amigo) => {
+        let li = document.createElement("li"); // Cria um elemento <li>
+        li.textContent = amigo; // Define o texto do <li> como o nome do amigo
+        listaAmigos.appendChild(li); // Adiciona o <li> à lista
+    });
+}
+
+// Função para exibir o último amigo sorteado na tela
+function exibirUltimoSorteado() {
+    let resultado = document.querySelector("#resultado"); // Seleciona o elemento onde o sorteado será exibido
+    resultado.textContent = `${sorteados[sorteados.length - 1]}`; // Exibe apenas o último sorteado
 }
 
 // Função para sortear um amigo secreto
@@ -71,16 +95,14 @@ function sortearAmigo() {
     // Adiciona o amigo sorteado à lista de sorteados
     sorteados.push(sorteado);
 
-    // Exibe o nome do amigo sorteado na tela
-    let resultado = document.getElementById("resultado");
-    resultado.textContent = `O amigo sorteado foi: ${sorteado}`;
-
-    exibirListaSorteados(); // Atualiza a lista de sorteados na tela
+    exibirUltimoSorteado(); // Exibe apenas o último sorteado
 }
 
 // Função para resetar o sorteio e limpar a lista
+// Função para resetar o sorteio e limpar a lista
 function resetarSorteio() {
     amigos = []; // Limpa a lista de amigos
+    sorteados = []; // Limpa a lista de sorteados
     exibirListaAmigos(); // Atualiza a exibição da lista de amigos
     let resultado = document.getElementById("resultado"); // Seleciona o elemento onde o resultado será exibido
     resultado.innerHTML = ""; // Limpa o conteúdo do resultado do sorteio

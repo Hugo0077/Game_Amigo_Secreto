@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <title>Amigo Secreto</title>
+
 </head>
 
 <body>
@@ -23,9 +24,16 @@
                 <input type="text" id="nomes" class="input-name" placeholder="Digite um nome">
                 <button class="button-add" onclick="adicionarAmigo()">Adicionar</button>
             </div>
-           
-            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <ul id="resultado" class="result-list" aria-live="polite"></ul>
+            <hr class="hr-invisivel">
+            <p><strong>Nomes inseridos:</strong></p>
+            <ul id="listaAmigos" class="name-list" aria-labelledby="listaAmigos" role="list">
+                <!--<li> nome 1 </li>-->
+            </ul>
+            <hr>
+            <p><strong>Nomes sorteados:</strong></p>
+            <ul id="resultado" class="result-list" aria-live="polite">
+                <!--<li> nome 1 </li>-->
+            </ul>
 
             <div class="botao-container">
                 <button class="button-sortear" onclick="sortearAmigo()" aria-label="Sortear amigo secreto">
