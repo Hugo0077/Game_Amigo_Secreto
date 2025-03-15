@@ -1,7 +1,7 @@
 
 # 🔥  Game Amigo Secreto  
 
-Um sorteador de amigo secreto simples, direto e sem frescura. Feito em **HTML, CSS e JavaScript**.  
+Um sorteador de amigo secreto simples, funciona para sortear somente 1 pessoa por vez.  
 
 ## ⚡ Recursos  
 
@@ -14,7 +14,7 @@ Um sorteador de amigo secreto simples, direto e sem frescura. Feito em **HTML, C
 ## 🛠️ Tecnologias  
 
 - **HTML5** – Estrutura sólida  
-- **CSS3** – Estilo sem exageros  
+- **CSS3** – Estilo chamativo e refrescante  
 - **JavaScript** – Simples e funcional  
 
 ## 🚀 Como rodar  
