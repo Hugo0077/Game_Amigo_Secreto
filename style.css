@@ -1,11 +1,11 @@
 :root {
-    --color-primary: #31446b;
-    --color-secondary: #cccbb7;
-    --color-tertiary: #ff4d4d;
-    --color-button: #31446b;
-    --color-button-hover: #243250;
+    --color-primary: #F5E7CA;
+    --color-secondary: #FEBA4D;
+    --color-tertiary: #FF8E40;
+    --color-button: #F5E7CA;
+    --color-button-hover: #4F3036;
     --color-text: #000000;
-    --color-white: #cccbb7;
+    --color-white: #FFBF82;
 }
 
 /* Estilos gerais */
@@ -129,7 +129,7 @@ button {
 }
 
 .button-add:hover {
-    background-color: #ff1a1a;
+    background-color: #F5E7CA;
 }
 
 /* Listas */
@@ -186,8 +186,8 @@ ul {
     font-size: 18px;
     border: none;
     border-radius: 25px;
-    background-color: #31446b; /* Cor do botão */
-    color: #cccbb7;
+    background-color: #FF8E40; /* Cor do botão */
+    color: black;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -203,7 +203,7 @@ ul {
 
 /* Estilo para o botão Sortear ao passar o mouse */
 .button-sortear:hover {
-    background-color: #243250; /* Cor ao passar o mouse */
+    background-color: #F5E7CA; /* Cor ao passar o mouse */
     transform: scale(1.05);
 }
 
@@ -214,7 +214,7 @@ ul {
     font-size: 14px;
     border: none;
     border-radius: 20px;
-    background-color: #ff4d4d;
+    background-color: #FF8E40;
     color: rgb(0, 0, 0);
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -223,7 +223,7 @@ ul {
 }
 
 .button-reset:hover {
-    background-color: #ff1a1a;
+    background-color: #F5E7CA;
     transform: scale(1.05);
 }
 
@@ -254,7 +254,7 @@ ul {
 hr {
     border: none;               /* Remove qualquer borda padrão */
     height: 2px;                /* Define a espessura da linha */
-    background-color: #9e9d8a;     /* Define a cor da linha */
+    background-color: #F5E7CA;     /* Define a cor da linha */
     margin: 20px 0;             /* Define o espaçamento superior e inferior */
     width: 30%;                /* Faz a linha ocupar toda a largura disponível */
 }
@@ -264,4 +264,4 @@ hr {
     height: 1px;                /* Define a altura para que ocupe um espaço */
     background-color: transparent; /* Torna a linha invisível */
     margin: 20px 0;             /* Ajusta o espaçamento */
-}
+} 

@@ -13,19 +13,17 @@ function adicionarAmigo() {
     let entrada = document.querySelector("#nomes"); // Seleciona o campo de entrada
     let nomeDosAmigos = entrada.value.trim().toLowerCase(); // Normaliza a entrada para minúsculas
 
-    // Verifica se o campo de entrada está vazio
-    if (nomeDosAmigos === "") {
-        alert("Por favor, insira um nome."); // Exibe um alerta se o campo estiver vazio
+    // Verifica se o campo de entrada está vazio ou contém apenas espaços
+    if (!nomeDosAmigos || nomeDosAmigos === "") {
+        alert("Por favor, insira um nome válido."); // Exibe um alerta se o campo estiver vazio
         return;
     }
 
     // Divide os nomes inseridos por vírgulas e remove espaços extras
-    let nomesArray = nomeDosAmigos.split(",").map(nome => nome.trim());
+    let nomesArray = nomeDosAmigos.split(",").map(nome => nome.trim()).filter(nome => nome !== "");
 
     // Itera sobre os nomes inseridos
     for (let nome of nomesArray) {
-        if (nome === "") continue; // Pula nomes vazios que podem ocorrer devido a vírgulas extras
-        // Verifica se o nome já foi adicionado à lista
         if (amigos.includes(nome)) {
             alert(`O nome ${nome} já foi adicionado.`); // Exibe um alerta se o nome já existe na lista
         } else {
@@ -37,8 +35,7 @@ function adicionarAmigo() {
     limparCampo(); // Limpa o campo de entrada após a adição
 }
 
-/* vesão diferente
-
+/* vesão antiga diferente
 // Função para exibir a lista de amigos na tela
 function exibirListaAmigos(){
     let listaAmigos = document.getElementById("listaAmigos"); // Seleciona o elemento onde a lista será exibida
@@ -80,6 +77,11 @@ function exibirUltimoSorteado() {
 
 // Função para sortear um amigo secreto
 function sortearAmigo() {
+
+    if (amigos.length < 2) {
+        alert("Adicione pelo menos 2 amigos antes de sortear.");
+        return;
+    }
     // Filtra os amigos que ainda não foram sorteados
     let amigosDisponiveis = amigos.filter(nome => !sorteados.includes(nome));
 
@@ -99,7 +101,6 @@ function sortearAmigo() {
 }
 
 // Função para resetar o sorteio e limpar a lista
-// Função para resetar o sorteio e limpar a lista
 function resetarSorteio() {
     amigos = []; // Limpa a lista de amigos
     sorteados = []; // Limpa a lista de sorteados
@@ -107,3 +108,5 @@ function resetarSorteio() {
     let resultado = document.getElementById("resultado"); // Seleciona o elemento onde o resultado será exibido
     resultado.innerHTML = ""; // Limpa o conteúdo do resultado do sorteio
 }
+
+
