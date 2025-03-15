@@ -21,7 +21,7 @@ Um sorteador de amigo secreto simples, funciona para sortear somente 1 pessoa po
 
 1️⃣ Clone o repositório:  
    ```sh
-   git clone https://github.com/seu-usuario/amigo-secreto.git
+   git clone https://github.com/Hugo0077/Game_Amigo_Secreto.git
 
 
 --- Feito por: Hugo Leonardo Silva Matos
